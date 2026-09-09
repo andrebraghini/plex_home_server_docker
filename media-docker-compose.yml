@@ -12,8 +12,8 @@ services:
       - PUID=1000
       - PGID=1000
     volumes:
-      - /home/akitaonrails/qbittorrent/config:/config
-      - /mnt/terachad/Downloads/torrents:/downloads
+      - /home/Backup/data/qbittorrent/config:/config
+      - /mnt/Backup/Downloads/torrents:/downloads
     ports:
       - '8080:8080'
       - '62609:62609'
@@ -26,8 +26,8 @@ services:
       - PUID=1000
       - PGID=1000
     volumes:
-      - /home/akitaonrails/jackett/downloads:/downloads
-      - /home/akitaonrails/jackett/config:/config
+      - /home/Backup/data/jackett/downloads:/downloads
+      - /home/Backup/data/jackett/config:/config
     ports:
       - '9117:9117'
 
@@ -39,9 +39,9 @@ services:
       - PUID=1000
       - PGID=1000
     volumes:
-      - /mnt/terachad/Videos/radarr:/movies
-      - /mnt/terachad/Videos/sonarr:/tv
-      - /home/akitaonrails/bazarr/appdata/config:/config
+      - /mnt/Backup/Videos/radarr:/movies
+      - /mnt/Backup/Videos/sonarr:/tv
+      - /home/Backup/data/bazarr/appdata/config:/config
     ports:
       - '6767:6767'
 
@@ -54,7 +54,7 @@ services:
       - TZ=America/Sao_Paulo
       - PORT=5055
     volumes:
-      - /home/akitaonrails/overseerr/config:/app/config
+      - /home/Backup/data/overseerr/config:/app/config
     ports:
       - '5055:5055'
 
@@ -68,7 +68,7 @@ services:
       - PUID=1000
       - PGID=1000
     volumes:
-      - /home/akitaonrails/prowlarr/config:/config
+      - /home/Backup/data/prowlarr/config:/config
     ports:
       - '9696:9696'
 
@@ -76,7 +76,7 @@ services:
     image: ghcr.io/flaresolverr/flaresolverr:latest
     restart: unless-stopped
     volumes:
-      - /home/akitaonrails/flaresolverr/config:/config
+      - /home/Backup/data/flaresolverr/config:/config
     ports:
       - '8191:8191'
 
@@ -88,9 +88,9 @@ services:
       - PUID=1000
       - PGID=1000
     volumes:
-      - /mnt/terachad/Downloads/nzbget:/downloads
-      - /mnt/terachad/Downloads/nzbget/incomplete:/incomplete-downloads
-      - /home/akitaonrails/nzbget/config:/config
+      - /mnt/Backup/Downloads/nzbget:/downloads
+      - /mnt/Backup/Downloads/nzbget/incomplete:/incomplete-downloads
+      - /home/Backup/data/nzbget/config:/config
     ports:
       - '6789:6789'
 
@@ -104,10 +104,10 @@ services:
       - PUID=1000
       - PGID=1000
     volumes:
-      - /home/akitaonrails/radarr/appdata/config:/config
-      - /mnt/terachad/Downloads/torrents:/downloads
-      - /mnt/terachad/Videos/radarr/movies:/movies
-      - /mnt/terachad/Videos/radarr/anime:/anime
+      - /home/Backup/data/radarr/appdata/config:/config
+      - /mnt/Backup/Downloads/torrents:/downloads
+      - /mnt/Backup/Videos/radarr/movies:/movies
+      - /mnt/Backup/Videos/radarr/anime:/anime
     ports:
       - '7878:7878'
 
@@ -121,9 +121,9 @@ services:
       - PUID=1000
       - PGID=1000
     volumes:
-      - /home/akitaonrails/sonarr/appdata/config:/config
-      - /mnt/terachad/Videos/sonarr:/tv
-      - /mnt/terachad/Downloads/torrents:/downloads
+      - /home/Backup/data/sonarr/appdata/config:/config
+      - /mnt/Backup/Videos/sonarr:/tv
+      - /mnt/Backup/Downloads/torrents:/downloads
     ports:
       - '8989:8989'
 
@@ -137,10 +137,10 @@ services:
       - VA_DRIVER=IHD
       - PLEX_HW_TRANS_MAX=16
     volumes:
-      - /home/akitaonrails/plex/config:/config
-      - /home/akitaonrails/plex/data:/data
-      - /home/akitaonrails/plex/transcode:/transcode
-      - /mnt/terachad/Videos:/media
+      - /home/Backup/data/plex/config:/config
+      - /home/Backup/data/plex/data:/data
+      - /home/Backup/data/plex/transcode:/transcode
+      - /mnt/Backup/Videos:/media
     devices:
       - /dev/dri:/dev/dri
       - /dev/bus/usb:/dev/bus/usb

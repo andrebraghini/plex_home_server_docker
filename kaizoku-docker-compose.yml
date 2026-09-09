@@ -52,7 +52,7 @@ services:
     image: jvmilazz0/kavita:latest
     restart: unless-stopped
     volumes:
-      - /home/akitaonrails/kavita:/kavita/config
-      - /mnt/terachad/Manga/Library:/manga
+      - /home/Backup/data/kavita:/kavita/config
+      - /mnt/Backup/Manga/Library:/manga
     ports:
       - '5000:5000'
