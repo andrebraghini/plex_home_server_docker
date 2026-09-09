@@ -20,8 +20,8 @@ services:
       - PGID=1000
       - TZ=America/Sao_Paulo
     volumes:
-      - /mnt/terachad/Manga/Library:/data
-      - /mnt/terachad/Manga/Kaizoku/config:/config
+      - /mnt/Backup/data/Manga/Library:/data
+      - /mnt/Backup/data/Manga/Kaizoku/config:/config
       - /tmp:/logs
     depends_on:
       kaizoku-db:
